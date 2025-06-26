@@ -19,8 +19,13 @@ const ScrollToTopButton = () => {
   const [showSocials, setShowSocials] = useState(true); // show by default
 
   useEffect(() => {
-    const toggleVisibility = () => setVisible(window.scrollY > 300);
+    const toggleVisibility = () => {
+      const threshold = window.innerWidth < 640 ? 50 : 300;
+      setVisible(window.scrollY > threshold);
+    };
+
     window.addEventListener("scroll", toggleVisibility);
+    toggleVisibility(); // Initial check on load
     return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
 
@@ -35,8 +40,10 @@ const ScrollToTopButton = () => {
       {/* Social Media Button & Icons - LEFT SIDE */}
       <div
         className={`fixed bottom-20 left-6 z-50 transition-opacity duration-300 ${
-          visible ? "opacity-100" : "opacity-0 pointer-events-none"
-        }`}
+          visible
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
+        } sm:opacity-100 sm:pointer-events-auto`}
       >
         <div
           className={`flex flex-col items-center gap-3 transition-all duration-500 ${
