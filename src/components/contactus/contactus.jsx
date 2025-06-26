@@ -1,4 +1,6 @@
 import { useState } from "react";
+import axios from "axios";
+import toast from "react-hot-toast";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -7,7 +9,7 @@ const ContactUs = () => {
     phone: "",
     message: "",
   });
-
+  const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState({});
 
   const validate = () => {
@@ -28,13 +30,30 @@ const ContactUs = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (validate()) {
-      console.log("Form submitted:", formData);
-      setFormData({ name: "", email: "", phone: "", message: "" });
-      setErrors({});
-      alert("Thank you! Your message has been sent.");
+    if (!validate()) return;
+
+    setLoading(true); // show loader
+
+    try {
+      const res = await axios.post(
+        "http://localhost:4000/defenceWebsiteRoutes/contactus",
+        formData
+      );
+
+      if (res.status === 200) {
+        toast.success("Message sent successfully!");
+        setFormData({ name: "", email: "", phone: "", message: "" });
+        setErrors({});
+      } else {
+        toast.error("Something went wrong. Try again!");
+      }
+    } catch (error) {
+      toast.error("Failed to send message. Please try later.");
+      console.error("Contact Form Error:", error);
+    } finally {
+      setLoading(false); // hide loader
     }
   };
 
@@ -125,11 +144,40 @@ const ContactUs = () => {
             </div>
           </div>
 
-          <button
+          {/* <button
             type="submit"
             className="w-full bg-[#24447c] text-white py-2 rounded-lg font-semibold hover:bg-[#1c3764] transition"
           >
             Submit
+          </button> */}
+          <button
+            type="submit"
+            className="w-full bg-[#24447c] text-white py-2 rounded-lg font-semibold hover:bg-[#1c3764] transition flex justify-center items-center"
+            disabled={loading}
+          >
+            {loading ? (
+              <svg
+                className="animate-spin h-5 w-5 mr-2 text-white"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  className="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  strokeWidth="4"
+                ></circle>
+                <path
+                  className="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
+                ></path>
+              </svg>
+            ) : null}
+            {loading ? "Sending..." : "Submit"}
           </button>
         </form>
 
