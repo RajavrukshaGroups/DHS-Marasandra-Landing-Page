@@ -1,4 +1,4 @@
-import priceChart from "../../assets/marasandra-price-new.png";
+import priceChart from "../../assets/price-upd.png";
 
 const PriceChart = () => {
   return (

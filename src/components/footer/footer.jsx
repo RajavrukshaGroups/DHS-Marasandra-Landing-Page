@@ -8,7 +8,6 @@ const Footer = () => {
             Defence Habitat Housing{" "}
             <span className="whitespace-nowrap">Co-Operative</span> Society Ltd.
           </h4>
-
           <p className="text-sm leading-5">
             Behind Swathi Garden Hotel,
             <br />
@@ -21,8 +20,24 @@ const Footer = () => {
         {/* Contact Info */}
         <div className="space-y-2">
           <h4 className="text-lg font-semibold">Contact</h4>
-          <p className="text-sm">📞 +91-8884 735 735</p>
-          <p className="text-sm">✉️ info@defencehousingsociety.com</p>
+          <p className="text-sm">
+            📞{" "}
+            <a
+              href="tel:+918884735735"
+              className="hover:underline hover:text-blue-900 transition"
+            >
+              +91-8884 735 735
+            </a>
+          </p>
+          <p className="text-sm">
+            ✉️{" "}
+            <a
+              href="mailto:info@defencehousingsociety.com"
+              className="hover:underline hover:text-blue-900 transition"
+            >
+              info@defencehousingsociety.com
+            </a>
+          </p>
         </div>
 
         {/* Office Hours */}
