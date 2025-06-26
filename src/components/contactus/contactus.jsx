@@ -152,7 +152,7 @@ const ContactUs = () => {
           </button> */}
           <button
             type="submit"
-            className="w-full bg-[#24447c] text-white py-2 rounded-lg font-semibold hover:bg-[#1c3764] transition flex justify-center items-center"
+            className="w-full bg-[#24447c] text-white py-2 rounded-lg font-semibold hover:bg-[#1c3764] transition flex justify-center items-center cursor-pointer"
             disabled={loading}
           >
             {loading ? (
