@@ -62,7 +62,7 @@ const ContactUs = () => {
   };
 
   return (
-    <section className="px-4 sm:px-6 lg:px-20">
+    <section className="py-15 px-4 sm:px-6 lg:px-20">
       <h2 className="text-3xl font-bold text-center text-[#24447c] mb-10">
         Contact Us
       </h2>
