@@ -1,4 +1,4 @@
-import { useState,useRef } from "react";
+import { useState, useRef } from "react";
 import axios from "axios";
 import toast from "react-hot-toast";
 import ReCAPTCHA from "react-google-recaptcha";
@@ -12,13 +12,12 @@ const ContactUs = () => {
   });
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState({});
-    const [recaptchaToken, setRecaptchaToken] = useState(null);
+  const [recaptchaToken, setRecaptchaToken] = useState(null);
   const recaptchaRef = useRef();
 
   const handleCaptchaChange = (token) => {
     setRecaptchaToken(token);
   };
-
 
   const validate = () => {
     const newErrors = {};
@@ -40,8 +39,9 @@ const ContactUs = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-     if (!recaptchaToken) {
-      alert("Please verify the reCAPTCHA.");
+    if (!recaptchaToken) {
+      // alert("Please verify the reCAPTCHA.");
+      toast.error("Please verify the reCAPTCHA.");
       return;
     }
     if (!validate()) return;
@@ -75,7 +75,7 @@ const ContactUs = () => {
 
   return (
     <section className="py-15 px-4 sm:px-6 lg:px-20">
-      <h2 className="text-3xl font-bold text-center text-[#24447c] mb-10">
+      <h2 className="text-2xl font-bold text-center text-[#24447c] mb-10">
         Contact Us
       </h2>
 
@@ -162,14 +162,14 @@ const ContactUs = () => {
           >
             Submit
           </button> */}
-           {/* reCAPTCHA */}
-        <div className="mb-6 flex justify-center">
-          <ReCAPTCHA
-            sitekey="6Le6Qm8rAAAAAD4UP8Tc-fjJgVTMTuYDDKM-C91Q"
-            onChange={handleCaptchaChange}
-            ref={recaptchaRef}
-          />
-        </div>
+          {/* reCAPTCHA */}
+          <div className="mb-6 flex justify-center">
+            <ReCAPTCHA
+              sitekey="6Le6Qm8rAAAAAD4UP8Tc-fjJgVTMTuYDDKM-C91Q"
+              onChange={handleCaptchaChange}
+              ref={recaptchaRef}
+            />
+          </div>
           <button
             type="submit"
             className="w-full bg-[#24447c] text-white py-2 rounded-lg font-semibold hover:bg-[#1c3764] transition flex justify-center items-center cursor-pointer"
@@ -203,7 +203,7 @@ const ContactUs = () => {
 
         {/* Google Maps Iframe */}
 
-        <div className="flex-1 border-2 border-[#24447c] rounded-xl overflow-hidden shadow-lg h-[300px] sm:h-[28rem]">
+        <div className="flex-1 border-2 border-[#24447c] rounded-xl overflow-hidden shadow-lg h-[300px] sm:h-[28rem] mt-14">
           <iframe
             className="w-full h-full"
             allowFullScreen

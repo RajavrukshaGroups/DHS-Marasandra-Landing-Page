@@ -24,7 +24,7 @@ const amenitiesList = [
 const Amenities = () => {
   return (
     <section className="py-15 px-4 sm:px-6 lg:px-20">
-      <h2 className="text-3xl font-bold text-center text-[#24447c] mb-10">
+      <h2 className="text-2xl font-bold text-center text-[#24447c] mb-10">
         Our Amenities
       </h2>
 
