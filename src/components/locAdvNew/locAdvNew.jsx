@@ -13,6 +13,14 @@ const LocationAdvantageNew = () => {
           alt="Location Advantage Animation"
           className="w-full h-auto object-cover block"
         />
+        {/* <video
+          src="https://res.cloudinary.com/dx7pz8dor/video/upload/v1751020282/mar-adv_2_l4rzyg.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-auto object-cover block"
+        /> */}
       </div>
     </section>
   );
