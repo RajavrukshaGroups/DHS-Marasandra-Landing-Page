@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import {
   ArrowUpCircle,
   Facebook,
@@ -113,18 +114,55 @@ const ScrollToTopButton = () => {
 
 const HomePage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#a9e4f6] via-[#e5eff4] to-[#ffffff]">
-      <Header />
-      <main className="pt-[120px] sm:pt-[120px]">
-        <HeadImg />
-        <LocationAdvantageNew />
-        <Amenities />
-        <PriceChart />
-        <ContactUs />
-        <Footer />
-        <ScrollToTopButton />
-      </main>
-    </div>
+    <>
+      <Helmet>
+        <title>
+          Plots for Sale in Marasandra North Bangalore | Premium Gated Community
+        </title>
+        <meta
+          name="description"
+          content="Discover premium residential and gated community plots for sale in Marasandra, North Bangalore. Ideal for investment and living with excellent connectivity."
+        />
+        <meta
+          name="keywords"
+          content="Marasandra North Bangalore, Plots for sale in Marasandra, Premium land in Bangalore, Residential projects, Gated community plots, Real estate in North Bangalore, Property investment Marasandra"
+        />
+        <meta
+          property="og:title"
+          content="Premium Plots for Sale in Marasandra North Bangalore"
+        />
+        <meta
+          property="og:description"
+          content="Affordable and luxury gated community plots in Marasandra North Bangalore. Explore investment opportunities now."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://defence-habitat-marasandra.defencehousingsociety.com/"
+        />
+        <meta
+          property="og:image"
+          content="https://defence-habitat-marasandra.defencehousingsociety.com/preview.jpg"
+        />
+        <link
+          rel="canonical"
+          href="https://defence-habitat-marasandra.defencehousingsociety.com/"
+        />
+      </Helmet>
+      ;
+      <div className="min-h-screen bg-gradient-to-br from-[#a9e4f6] via-[#e5eff4] to-[#ffffff]">
+        <Header />
+        <main className="pt-[120px] sm:pt-[120px]">
+          <HeadImg />
+          <LocationAdvantageNew />
+          <Amenities />
+          <PriceChart />
+          <ContactUs />
+          <Footer />
+          <ScrollToTopButton />
+        </main>
+      </div>
+    </>
   );
 };
 
