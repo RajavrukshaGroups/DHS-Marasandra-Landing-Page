@@ -28,7 +28,7 @@ const Amenities = () => {
         Our Amenities
       </h2>
 
-      <div className="flex gap-10 justify-center items-center flex-wrap">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 place-items-center lg:flex lg:justify-between lg:gap-6 lg:flex-wrap">
         {amenitiesList.map(({ title, icon: Icon }, index) => (
           <div
             key={index}

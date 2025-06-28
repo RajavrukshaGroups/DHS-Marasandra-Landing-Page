@@ -79,11 +79,12 @@ const ContactUs = () => {
         Contact Us
       </h2>
 
+      {/* <div className="flex flex-col lg:flex-row gap-10 items-stretch max-w-6xl mx-auto"> */}
       <div className="flex flex-col lg:flex-row gap-10 items-stretch max-w-6xl mx-auto">
-        {/* Contact Form */}
         <form
           onSubmit={handleSubmit}
-          className="flex-1 p-8 rounded-xl shadow-lg border-2 border-[#24447c] min-h-[28rem] flex flex-col justify-between"
+          // className="flex-1 p-8 rounded-xl shadow-lg border-2 border-[#24447c] min-h-[28rem] flex flex-col justify-between"
+          className="flex-1 p-8 rounded-xl shadow-lg border-2 border-[#24447c] min-h-[28rem] h-full flex flex-col justify-between"
         >
           <div>
             <div className="grid sm:grid-cols-2 gap-6 mb-6">
@@ -200,12 +201,10 @@ const ContactUs = () => {
             {loading ? "Sending..." : "Submit"}
           </button>
         </form>
-
-        {/* Google Maps Iframe */}
-
-        <div className="flex-1 border-2 border-[#24447c] rounded-xl overflow-hidden shadow-lg h-[300px] sm:h-[28rem] mt-14">
+        {/* <div className="flex-1 border-2 border-[#24447c] rounded-xl overflow-hidden shadow-lg h-[300px] sm:h-[28rem] mt-14"> */}
+        <div className="flex-1 flex flex-col h-[20rem] sm:h-[28rem] rounded-xl overflow-hidden shadow-lg border-2 border-[#24447c]">
           <iframe
-            className="w-full h-full"
+            className="flex-grow w-full"
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
