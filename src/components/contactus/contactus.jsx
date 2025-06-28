@@ -39,18 +39,18 @@ const ContactUs = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!recaptchaToken) {
-      // alert("Please verify the reCAPTCHA.");
-      toast.error("Please verify the reCAPTCHA.");
-      return;
-    }
+    // if (!recaptchaToken) {
+    //   // alert("Please verify the reCAPTCHA.");
+    //   toast.error("Please verify the reCAPTCHA.");
+    //   return;
+    // }
     if (!validate()) return;
 
     setLoading(true); // show loader
 
     try {
       const res = await axios.post(
-        "http://localhost:4000/defenceWebsiteRoutes/contactus",
+        "https://adminpanel.defencehousingsociety.com/defenceWebsiteRoutes/contactus",
         formData
       );
 
@@ -163,13 +163,13 @@ const ContactUs = () => {
             Submit
           </button> */}
           {/* reCAPTCHA */}
-          <div className="mb-6 flex justify-center">
+          {/* <div className="mb-6 flex justify-center">
             <ReCAPTCHA
               sitekey="6Le6Qm8rAAAAAD4UP8Tc-fjJgVTMTuYDDKM-C91Q"
               onChange={handleCaptchaChange}
               ref={recaptchaRef}
             />
-          </div>
+          </div> */}
           <button
             type="submit"
             className="w-full bg-[#24447c] text-white py-2 rounded-lg font-semibold hover:bg-[#1c3764] transition flex justify-center items-center cursor-pointer"
