@@ -55,7 +55,7 @@ const ScrollToTopButton = () => {
         >
           {/* Facebook */}
           <a
-            href="https://facebook.com"
+            href="https://www.facebook.com/defencehabitat/"
             target="_blank"
             rel="noopener noreferrer"
             className="group w-10 h-10 flex items-center justify-center rounded-full overflow-hidden shadow border border-white bg-white transition-all duration-500 hover:bg-[#1877f2]"
@@ -65,7 +65,7 @@ const ScrollToTopButton = () => {
 
           {/* Instagram */}
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/defence_habitat/"
             target="_blank"
             rel="noopener noreferrer"
             className="group w-10 h-10 flex items-center justify-center rounded-full overflow-hidden shadow border border-white bg-white transition-all duration-500 hover:bg-gradient-to-br from-[#feda75] via-[#d62976] to-[#4f5bd5]"
@@ -75,7 +75,7 @@ const ScrollToTopButton = () => {
 
           {/* Twitter */}
           <a
-            href="https://twitter.com"
+            href="https://x.com/DefenceSociety"
             target="_blank"
             rel="noopener noreferrer"
             className="group w-10 h-10 flex items-center justify-center rounded-full overflow-hidden shadow border border-white bg-white transition-all duration-500 hover:bg-[#1da1f2]"
