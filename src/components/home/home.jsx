@@ -5,6 +5,8 @@ import {
   Facebook,
   Instagram,
   Twitter,
+  Youtube,
+  MessageCircle,
   ArrowRight,
 } from "lucide-react";
 import Amenities from "../amenities/amenities";
@@ -58,9 +60,11 @@ const ScrollToTopButton = () => {
             href="https://www.facebook.com/defencehabitat/"
             target="_blank"
             rel="noopener noreferrer"
-            className="group w-10 h-10 flex items-center justify-center rounded-full overflow-hidden shadow border border-white bg-white transition-all duration-500 hover:bg-[#1877f2]"
+            // className="group w-10 h-10 flex items-center justify-center rounded-full overflow-hidden shadow border border-white bg-white transition-all duration-500 hover:bg-[#1877f2]"
+            className="group w-10 h-10 flex items-center justify-center rounded-full overflow-hidden shadow border border-white bg-white transition-colors duration-500 hover:bg-[#1877f2]"
           >
-            <Facebook className="w-5 h-5 text-[#24447c] group-hover:text-white transition duration-300" />
+            {/* <Facebook className="w-5 h-5 text-[#24447c] group-hover:text-white transition duration-300" /> */}
+            <Facebook className="w-5 h-5 text-[#24447c] group-hover:text-white transition-colors duration-500" />
           </a>
 
           {/* Instagram */}
@@ -68,9 +72,19 @@ const ScrollToTopButton = () => {
             href="https://www.instagram.com/defence_habitat/"
             target="_blank"
             rel="noopener noreferrer"
-            className="group w-10 h-10 flex items-center justify-center rounded-full overflow-hidden shadow border border-white bg-white transition-all duration-500 hover:bg-gradient-to-br from-[#feda75] via-[#d62976] to-[#4f5bd5]"
+            // className="group w-10 h-10 flex items-center justify-center rounded-full overflow-hidden shadow border border-white bg-white transition-all duration-500 hover:bg-gradient-to-br from-[#feda75] via-[#d62976] to-[#4f5bd5]"
+            className="group w-10 h-10 flex items-center justify-center rounded-full overflow-hidden shadow border border-white bg-white transition-colors duration-500 hover:bg-gradient-to-br from-[#feda75] via-[#d62976] to-[#4f5bd5]"
           >
-            <Instagram className="w-5 h-5 text-[#24447c] group-hover:text-white transition duration-300" />
+            {/* <Instagram className="w-5 h-5 text-[#24447c] group-hover:text-white transition duration-300" /> */}
+            <Instagram className="w-5 h-5 text-[#24447c] group-hover:text-white transition-colors duration-500" />
+          </a>
+          <a
+            href="https://www.youtube.com/watch?v=fR1d7O_xQlQ"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group w-10 h-10 flex items-center justify-center rounded-full overflow-hidden shadow border border-white bg-white transition-colors duration-500 hover:bg-[#FF0000]"
+          >
+            <Youtube className="w-5 h-5 text-[#24447c] group-hover:text-white transition-colors duration-500" />
           </a>
 
           {/* Twitter */}
@@ -78,9 +92,11 @@ const ScrollToTopButton = () => {
             href="https://x.com/DefenceSociety"
             target="_blank"
             rel="noopener noreferrer"
-            className="group w-10 h-10 flex items-center justify-center rounded-full overflow-hidden shadow border border-white bg-white transition-all duration-500 hover:bg-[#1da1f2]"
+            // className="group w-10 h-10 flex items-center justify-center rounded-full overflow-hidden shadow border border-white bg-white transition-all duration-500 hover:bg-[#1da1f2]"
+            className="group w-10 h-10 flex items-center justify-center rounded-full overflow-hidden shadow border border-white bg-white transition-colors duration-500 hover:bg-[#1da1f2]"
           >
-            <Twitter className="w-5 h-5 text-[#24447c] group-hover:text-white transition duration-300" />
+            {/* <Twitter className="w-5 h-5 text-[#24447c] group-hover:text-white transition duration-300" /> */}
+            <Twitter className="w-5 h-5 text-[#24447c] group-hover:text-white transition-colors duration-500" />
           </a>
         </div>
 

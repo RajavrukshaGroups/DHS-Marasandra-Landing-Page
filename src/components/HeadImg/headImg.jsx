@@ -1,5 +1,5 @@
 import headImg from "../../assets/marasandra-home.png";
-
+import "./headImg.css";
 const HeadImg = () => {
   return (
     <section className="w-full px-4 sm:px-6 py-12">
@@ -19,10 +19,9 @@ const HeadImg = () => {
             Defence Habitat <br className="hidden md:block" />
             <span className="text-[#24447c]">Marasandra</span>
           </h1>
-         
 
           <p className="text-blue-900 text-base sm:text-lg font-medium">
-            📍 North Bangalore – Yelahanka – Doddaballapur Road
+            📍 North Bangalore, Yelahanka – Doddaballapur Road
           </p>
 
           <div className="mt-2 text-gray-700 text-sm sm:text-base leading-relaxed space-y-2">
@@ -30,20 +29,14 @@ const HeadImg = () => {
             <p className="text-red-600 font-semibold italic">
               “First Come First Serve” Basis
             </p>
-            <p className="text-green-700 font-bold uppercase">
+            {/* <p className="text-green-700 font-bold uppercase">
               Booking Open for General Public
+              Booking Now Open for Phase 2
+            </p> */}
+            <p className="text-green-700 font-bold uppercase animate-smooth-blink">
+              Booking Now Open for Phase 2
             </p>
           </div>
-
-          {/* Optional CTA Button */}
-          {/* <div className="mt-4">
-            <a
-              href="#contact"
-              className="inline-block px-6 py-3 bg-blue-800 text-white rounded-md text-sm sm:text-base font-medium hover:bg-blue-700 transition"
-            >
-              Contact Now
-            </a>
-          </div> */}
         </div>
       </div>
     </section>

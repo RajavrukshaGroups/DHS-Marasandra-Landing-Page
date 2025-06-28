@@ -1,4 +1,4 @@
-import priceChart from "../../assets/price-upd.png";
+import priceChart from "../../assets/price-latest.png";
 
 const PriceChart = () => {
   return (

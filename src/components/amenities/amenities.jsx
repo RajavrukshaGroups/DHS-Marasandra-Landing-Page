@@ -11,8 +11,8 @@ import {
 import { GiWaterRecycling, GiStreetLight } from "react-icons/gi";
 
 const amenitiesList = [
-  { title: "Water Infrastructure", icon: FaWater },
-  { title: "Electrical Networks", icon: FaBolt },
+  { title: "Water Connection", icon: FaWater },
+  { title: "Electricity Connection", icon: FaBolt },
   { title: "Sewage Solutions", icon: GiWaterRecycling },
   { title: "Clubhouse", icon: FaBuilding },
   { title: "Multiple Parks", icon: FaTree },
